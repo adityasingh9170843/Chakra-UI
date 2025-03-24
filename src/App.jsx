@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Create from "./pages/Create";
 import Profile from "./pages/Profile";
