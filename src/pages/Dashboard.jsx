@@ -12,8 +12,7 @@ import {
   Text,
   CardHeader,
   HStack,
-  
-  
+  Avatar,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -51,9 +50,10 @@ function Dashboard() {
           <Card.Root key={task.id} divideY={1} divideColor={"gray.200"}>
             <CardHeader>
               <Flex gap={"5"}>
-                <Box w={"50px"} h={"50px"}>
-                  <Text>AV</Text>
-                </Box>
+                <Avatar.Root>
+                  <Avatar.Fallback name="Segun Adebayo" />
+                  <Avatar.Image src={task.img} />
+                </Avatar.Root>
                 <Box>
                   <Heading as="h3" size={"sm"}>
                     {task.title}
@@ -67,12 +67,9 @@ function Dashboard() {
               <Text>{task.description}</Text>
             </CardBody>
 
-            
-
             <CardFooter py={4}>
               <HStack>
                 <Button colorPalette={"teal"} variant={"outline"}>
-                  
                   <BsEye />
                   Watch
                 </Button>
